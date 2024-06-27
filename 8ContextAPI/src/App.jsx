@@ -1,5 +1,7 @@
 //Passing props can become verbose and inconvenient when you need to pass the props deeply through the tree, To overcome from this we use Context API
 
+//ContextAPI only helps to get rid of prop drilling, it doesn't solve the re-rendering of that state.
+
 import { useContext, useState } from "react";
 import { CountContext } from "./context";
 
@@ -11,7 +13,7 @@ function App() {
   return (
     <>
       <CountContext.Provider value={count}>
-        <Count count={count} setCount={setCount} />
+        <Count count={count} />
       </CountContext.Provider>
       
     </>
